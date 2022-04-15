@@ -37,10 +37,24 @@ async def reload(ctx, extension):
 
 
 
-for filename in os.listdir('./cogs'):
+for filename in os.listdir('./cogs/moderation'):
     if filename.endswith('.py'):
-        bot.load_extension(f'cogs.{filename[:-3]}')
-        print("Cogs loaded")
+        bot.load_extension(f'cogs.moderation.{filename[:-3]}')
+        print("Moderation Cogs loaded")
+    else:
+        print("One cog failed to load.")
+
+for filename in os.listdir('./cogs/info'):
+    if filename.endswith('.py'):
+        bot.load_extension(f'cogs.info.{filename[:-3]}')
+        print("Info Cogs loaded")
+    else:
+        print("One cog failed to load.")
+
+for filename in os.listdir('./cogs/fun'):
+    if filename.endswith('.py'):
+        bot.load_extension(f'cogs.fun.{filename[:-3]}')
+        print("Fun Cogs loaded")
     else:
         print("One cog failed to load.")
 
