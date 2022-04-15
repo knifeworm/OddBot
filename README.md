@@ -16,3 +16,7 @@ python bot.py
 And your all set.
 
 ## What does it do?
+Not a whole lot at the moment. But i will list all of them here.
+- ban command
+- serverinfo command
+- ping command
