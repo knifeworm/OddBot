@@ -1,0 +1,22 @@
+root - INFO - Loaded Cog: balence
+root - INFO - Loaded Cog: ban
+root - INFO - Loaded Cog: beg
+root - INFO - Loaded Cog: clear
+root - INFO - Loaded Cog: deposit
+root - INFO - Loaded Cog: help
+root - INFO - Loaded Cog: kick
+root - INFO - Loaded Cog: pay
+root - INFO - Loaded Cog: ping
+root - INFO - Loaded Cog: serverinfo
+root - INFO - Loaded Cog: userinfo
+root - INFO - Loaded Cog: withdraw
+root - WARNING - Failed to load cog: __pycach
+discord.client - INFO - logging in using static token
+discord.gateway - INFO - Shard ID None has sent the IDENTIFY payload.
+discord.gateway - INFO - Shard ID None has connected to Gateway: ["gateway-prd-main-gs2n",{"micros":97310,"calls":["discord-sessions-blue-prd-2-79",{"micros":96335,"calls":["start_session",{"micros":71886,"calls":["discord-api-66699ff596-vslrq",{"micros":67824,"calls":["get_user",{"micros":10489},"add_authorized_ip",{"micros":1299},"get_guilds",{"micros":10698},"coros_wait",{"micros":2}]}]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":752,"calls":[]}]}]}] (Session ID: 2e244c2ca4d4ac409d4330d421eadd96).
+root - INFO - Bot is online!
+discord.client - INFO - Received signal to terminate bot and event loop.
+discord.client - INFO - Cleaning up tasks.
+discord.client - INFO - Cleaning up after 1 tasks.
+discord.client - INFO - All tasks finished cancelling.
+discord.client - INFO - Closing the event loop.
