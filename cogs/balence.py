@@ -40,9 +40,9 @@ class balence(commands.Cog):
             wallet_amount = users[str(ctx.author.id)]["wallet"]
             bank_amount = users[str(ctx.author.id)]["bank"]
 
-            embed = discord.Embed(title=f"{ctx.author.name}'s balence", color=0x00FF00)
-            embed.add_field(name="Wallet balence", value=wallet_amount)
-            embed.add_field(name="Bank balence", value=bank_amount)
+            embed = discord.Embed(title=f"{ctx.author.name}'s balance", color=0x00FF00)
+            embed.add_field(name="Wallet balance", value=wallet_amount)
+            embed.add_field(name="Bank balance", value=bank_amount)
             await ctx.send(embed=embed)
         else:
             await open_account(member)
@@ -53,9 +53,9 @@ class balence(commands.Cog):
             wallet_amount = users[str(member.id)]["wallet"]
             bank_amount = users[str(member.id)]["bank"]
 
-            embed = discord.Embed(title=f"{member.name}'s balence", color=0x00FF00)
-            embed.add_field(name="Wallet balence", value=wallet_amount)
-            embed.add_field(name="Bank balence", value=bank_amount)
+            embed = discord.Embed(title=f"{member.name}'s balance", color=0x00FF00)
+            embed.add_field(name="Wallet balance", value=wallet_amount)
+            embed.add_field(name="Bank balance", value=bank_amount)
             await ctx.send(embed=embed)
     
 def setup(bot):
