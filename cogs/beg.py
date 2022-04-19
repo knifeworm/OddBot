@@ -33,6 +33,7 @@ class beg(commands.Cog):
         self.bot = bot
 
     @commands.command()
+    @commands.cooldown(1, 60, commands.BucketType.user)
     async def beg(self, ctx):
         await open_account(ctx.author)
 
@@ -47,6 +48,12 @@ class beg(commands.Cog):
 
         with open("mainbank.json","w") as f:
             json.dump(users,f)
+
+
+    @beg.error
+    async def beg_error(self, ctx, error):
+        if isinstance(error, commands.CommandOnCooldown):
+            await ctx.send("You are on a one minute cool down.")
 
 
 def setup(bot):

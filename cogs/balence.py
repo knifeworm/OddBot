@@ -30,7 +30,7 @@ class balence(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
-    @commands.command()
+    @commands.command(aliases=["bal", "balance"])
     async def balence(self, ctx, member : discord.Member = None):
         if member == None:
             await open_account(ctx.author)
@@ -57,6 +57,6 @@ class balence(commands.Cog):
             embed.add_field(name="Wallet balence", value=wallet_amount)
             embed.add_field(name="Bank balence", value=bank_amount)
             await ctx.send(embed=embed)
-
+    
 def setup(bot):
     bot.add_cog(balence(bot))
