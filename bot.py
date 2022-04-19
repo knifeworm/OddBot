@@ -3,6 +3,7 @@ from discord.ext import commands
 import logging
 import os
 import config
+from discord.ext.commands import CommandNotFound
 
 intents = discord.Intents.default()
 intents.members = True
@@ -18,6 +19,11 @@ async def on_ready():
     logging.info('Bot is online!')
     print("Bot is online!")
 
+
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, CommandNotFound):
+        await ctx.send("The command you have executed is not found.")
 
 
 @bot.command()
