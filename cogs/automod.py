@@ -43,13 +43,13 @@ class automod(commands.Cog):
                 await ctx.send("Automod is already turned off.")
         elif option == "on":
             stuff = data[str(ctx.guild.id)]["auto"]
-            if stuff == "yes":
-                await ctx.send("Auto mod is already on.")
-            elif stuff == "no":
+            if stuff == "no":
                 await ctx.send("Auto mod turned on.")
                 data[str(ctx.guild.id)]["auto"] = "yes"
                 with open("automod.json","w") as f:
                     json.dump(data,f)
+            elif stuff == "yes":
+                await ctx.send("Automod is already turned on.")
 
 
 def setup(bot):

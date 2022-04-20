@@ -90,8 +90,6 @@ async def on_message(msg):
             if word in msg.content:
                 await msg.delete()
                 await msg.channel.send("Please don't swear")
-    elif auto == "no":
-        await bot.process_commands(msg)
     await bot.process_commands(msg)
 
 bot.run(config.token)
