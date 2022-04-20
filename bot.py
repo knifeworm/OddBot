@@ -54,10 +54,10 @@ async def on_guild_join(guild):
         json.dump(prefixes,f)
 
 
-@bot.event
-async def on_command_error(ctx, error):
-    if isinstance(error, CommandNotFound):
-        await ctx.send(f"The command {error} you have executed is not found. use the command !help for a list of available commands")
+#@bot.event
+#async def on_command_error(ctx, error):
+    #if isinstance(error, CommandNotFound):
+        #await ctx.send(f"The command {error} you have executed is not found. use the command !help for a list of available commands")
 
 
 @bot.command()
